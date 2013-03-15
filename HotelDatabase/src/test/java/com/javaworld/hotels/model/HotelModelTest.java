@@ -36,6 +36,24 @@ public class HotelModelTest extends TestCase {
 			assertEquals(h.getCity(),"London");			
 		}
 	}
+	
+	public void testFindHotelsByCity3() {
+		HotelModel finder = new HotelModel();
+		List<Hotel> hotes = finder.findHotelsByCity("Switzerland");
+		assertTrue(hotels.size() > 0);
+		for(Hotel h : hotels) {
+			assertEquals(h.getCity(),"Switzerland");			
+		}
+	}
+	
+	public void testFindHotelsByCity4() {
+		HotelModel finder = new HotelModel();
+		List<Hotel> hotels = finder.findHotelsByCity("Geneva");
+		assertTrue(hotels.size() > 0);
+		for(Hotel h : hotels) {
+			assertEquals(h.getCity(),"Geneva");			
+		}
+	}
 
 	public void testFindHotelsByEmptyCity() {
 		HotelModel finder = new HotelModel();
